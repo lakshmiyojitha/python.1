@@ -1,0 +1,12 @@
+# Function to calculate nth Fibonacci number
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+# User input
+n = int(input("Enter the value of n: "))
+# Function call and display result
+print(f"The {n}th Fibonacci number is {fibonacci(n)}")

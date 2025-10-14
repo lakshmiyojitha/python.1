@@ -1,0 +1,28 @@
+import numpy as np
+
+# Array for testing
+arr = np.array([1, 5, 7, 2, 9])
+print("Original Array:", arr)
+
+# a. Extract numbers less and greater than a specified number
+num = 5
+print("Numbers greater than", num, ":", arr[arr > num])
+print("Numbers less than", num, ":", arr[arr < num])
+
+# b. Max, Min, Argmax, Argmin on a 2D array
+arr2 = np.array([[3, 8, 1],
+                 [4, 7, 2]])
+print("\n2D Array:\n", arr2)
+
+print("Maximum value:", np.max(arr2))
+print("Minimum value:", np.min(arr2))
+print("Index of maximum values along axis=0:", np.argmax(arr2, axis=0))
+print("Index of minimum values along axis=1:", np.argmin(arr2, axis=1))
+
+# Demonstrating other methods
+print("\nString Representation:", repr(arr))
+print("Count of non-zero elements:", np.count_nonzero(arr))
+print("Bincount:", np.bincount(arr))
+unique_vals, counts = np.unique(arr, return_counts=True)
+print("Unique values:", unique_vals)
+print("Counts:", counts)

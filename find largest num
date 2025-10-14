@@ -1,0 +1,7 @@
+numbers = [12, 45, 78, 23, 56]
+
+# find the largest number using max() function
+
+largest = max(numbers)
+# display the result
+print("The largest number is:", largest)

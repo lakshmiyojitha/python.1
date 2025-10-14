@@ -1,0 +1,15 @@
+# Program to demonstrate error handling for division by zero
+
+def divide_numbers(a, b):
+    try:
+        result = a / b
+        print("The result of division is", result)
+    except ZeroDivisionError:
+        print("Division by zero is not allowed.")
+
+# User input
+num1 = int(input("Enter the numerator: "))
+num2 = int(input("Enter the denominator: "))
+
+# Function call
+divide_numbers(num1, num2)

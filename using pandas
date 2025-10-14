@@ -1,0 +1,17 @@
+import pandas as pd
+
+# i) Create and display a one-dimensional array-like object (Pandas Series)
+data = [10, 20, 30, 40, 50]
+series = pd.Series(data)
+
+print("Pandas Series:")
+print(series)
+
+# Display type
+print("\nType of the object:", type(series))
+
+# ii) Convert a Pandas Series to a Python list and display its type
+list_version = series.tolist()
+
+print("Python List:", list_version)
+print("Type of list_version:", type(list_version))

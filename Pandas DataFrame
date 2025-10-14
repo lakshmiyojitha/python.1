@@ -1,0 +1,37 @@
+import pandas as pd
+import numpy as np
+
+# Sample data
+exam_data = {
+    'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily',
+              'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'],
+    'score': [12.5, 9, 16.5, np.nan, 9, 20, 14.5, np.nan, 8, 19],
+    'attempts': [1, 3, 2, 3, 2, 3, 1, 1, 2, 1],
+    'qualify': ['yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes']
+}
+
+labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+# i) Create and display a DataFrame from the dictionary with index labels
+print("=== i) Create and display the DataFrame ===")
+df = pd.DataFrame(exam_data, index=labels)
+print(df)
+
+# ii) Change the name 'James' to 'Suresh' in the 'name' column
+print("\n=== ii) Change name 'James' to 'Suresh' ===")
+df.loc[df['name'] == 'James', 'name'] = 'Suresh'
+print(df)
+
+# iii) Insert a new column in the existing DataFrame
+print("\n=== iii) Insert a new column ===")
+df['age'] = [18, 20, 19, 22, 21, 20, 23, 19, 20, 22]   # Adding new column 'age'
+print(df)
+
+# iv) Get list from DataFrame column headers
+print("\n=== iv) Get list of column headers ===")
+columns_list = df.columns.tolist()
+print("List of column headers:", columns_list)
+
+# v) (Repeated) Get list from DataFrame column headers again
+print("\n=== v) Get list of column headers again ===")
+print("Column header list:", list(df.columns))
